@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Bài 1: Quản lý tuyển sinh -->
+    <div class="bai1_content">
+        <h3>TỔNG KẾT ĐIỂM TUYỂN SINH</h3>
+        <div class="card-top">
+            <h4>Điểm chuẩn</h4>
+            <input id="diemChuan" type="number" placeholder="Nhập điểm chuẩn">
+        </div>
+        <div class="card-body">
+            <div class="diem3Mon">
+                <h4>Điểm 3 môn</h4>
+                <div class="">
+                    <h5>Điểm môn Toán</h5>
+                    <input id="diemToan" type="number" placeholder="Nhập điểm">
+
+                </div>
+                <div>
+                    <h5>Điểm môn Văn</h5>
+                    <input id="diemVan" type="number" placeholder="Nhập điểm">
+                </div>
+                <div>
+                    <h5>Điểm môn Tiếng Anh</h5>
+                    <input id="diemTiengAnh" type="number" placeholder="Nhập điểm">
+                </div>
+
+            </div>
+
+            <h4>Điểm ưu tiên</h4>
+            <div class="content-2">
+
+                <h5>Khu vực</h5>
+                <input id="diemUuTien" type="text" placeholder="Nhập khu vực">
+
+
+                <h5>Đối tượng</h5>
+                <input id="diemDoiTuong" type="number" placeholder="Nhập đối tượng">
+            </div>
+
+
+
+
+        </div>
+        <div class="card-footer">
+            <button onclick="checkDiemTong()" id="tongKet">Tổng kết</button>
+            <span id="ketQua">Kết quả:</span>
+
+        </div>
+
+
+    </div>
+
+    <hr />
+    <!-- Bài tập 2 -->
+     <div>
+        <h3>Tính Tiền Điện</h3>
+        <div>
+            <h4>Tổng hóa đơn tiền điện Tháng 10</h4>
+        </div>
+        <div class="body">
+            <div>
+                <h5>Tên chủ hộ</h5>
+                <input id="tenChuHo" type="text" placeholder="Nhập tên">
+                <h5>Số KW điện tiêu thụ</h5>
+                <input id="soKw" type="number" placeholder="Số KW">
+            </div>
+
+
+        </div>
+        <div>
+            <button id="thanhToan">Thanh Toán</button>
+            <span id="kwThanhToan"></span>
+        </div>
+     </div>
+
+    <hr />
+     <!-- Bài 3 -->
+      <div>
+        <h3>Tính thuế thu nhập cá nhân</h3>
+        <div class="body-2">
+            <div>
+                <h5>Họ tên</h5>
+                <input id="hoTen" type="text" placeholder="Nhập họ tên">
+                <h5>Tổng thu nhập trong năm</h5>
+                <input id="tongThuNhap" type="number" placeholder="Nhập tổng thu nhập">
+                <h5>Số người phụ thuộc</h5>
+                <input id="nguoiPhuThuoc" type="number" placeholder="Số người phụ thuộc">
+            </div>
+            
+
+        </div>
+        <div>
+            <button onclick="tinhThue()">Tính thuế</button>
+            <p id="resultThue"></p>
+        </div>
+
+      </div>
+
+      <hr />
+    <!-- Bài 4 -->
+     <div>
+        <h3>Tính tiền Cap
+        </h3>
+        <div class="body-3">
+            <div>
+                <h5>Mã khách hàng</h5>
+                <input id="maKhachHang" type="text" placeholder="Nhập mã khách hàng" required>
+    
+                <h5>Loại khách hàng</h5>
+                <select id="loaiKhachHang" onchange="toggleConnectionInput()">
+                    <option value="nhaDan">Nhà dân</option>
+                    <option value="doanhNghiep">Doanh nghiệp</option>
+                </select>
+    
+                <h5>Số kênh cao cấp</h5>
+                <input id="soKenhCaoCap" type="number" placeholder="Nhập số kênh cao cấp" required>
+    
+                <h5 id="soKetNoiLabel" class="hidden">Số kết nối</h5>
+                <input id="soKetNoi" type="number" placeholder="Nhập số kết nối" class="hidden">
+            </div>
+        </div>
+    
+        <div>
+            <button onclick="tinhHoaDon()">Tính hóa đơn</button>
+            <p id="tienCap"></p>
+        </div>
+     </div>
+    
+
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
